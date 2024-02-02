@@ -1,5 +1,5 @@
 package org.app;
-
+//also inspired from the documentation here 'https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/javaDD/Java8DeepDive2.md' generic classes and interfaces
 import java.util.ArrayList;
 import java.util.List;
 
