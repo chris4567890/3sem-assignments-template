@@ -157,14 +157,19 @@ public class Main {
             averageRating = averageRating+book.getRating();
             totalPages = totalPages+book.getPages();
         }
+        //was done thanks to the documentation from here: 'https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/javaDD/SerializeObjects.md'
         MemoryStorage dataMemSaver = new MemoryStorage();
         FileStorage fileStorage = new FileStorage();
-        dataMemSaver.store(42);
+        dataMemSaver.store(dasKapital);
+        dataMemSaver.store("hello there");
         //note : got no clue where it saves the file could make it so it knows where but don't have the time.
         fileStorage.store(dasKapital.toString());
-        System.out.println("have saved your thingy to file");
+
         System.out.println("here is your thingy from file" + fileStorage.retrive(dasKapital.toString()));
-        System.out.println("Here is your retrieved item : " + dataMemSaver.retrive(null));
+        System.out.println("test string output:" + dataMemSaver.retrive("hello there"));
+
+
+        System.out.println("Here is your retrieved item : " + dataMemSaver.retrive(dasKapital.toString()));
 
 
 
@@ -186,7 +191,6 @@ public class Main {
         System.out.println("the total sum even though it doesn't add up considering convertion rate" + total_sum);
 
         Map<String,List<Transaction>> currencyGroup = transactions.stream().collect(Collectors.groupingBy(Transaction::getCurrency,Collectors.toList()));
-
         int averageTransSum = 0;
         for(Transaction transaction: transactions){
             averageTransSum = averageTransSum+transaction.getAmount();
@@ -196,7 +200,7 @@ public class Main {
         System.out.println(currencyGroup);
         Transaction highestTrans = transactions.stream().max(Comparator.comparing(Transaction::getAmount)).get();
         System.out.println("here is your highest transaction: " +highestTrans.getAmount());
-
+        //this task was done mostly with the example code provided due to lack of documentation.
         CompletableFuture task1 = CompletableFuture.runAsync(() ->new Task());
         CompletableFuture task2 = CompletableFuture.runAsync(()-> new Task());
 

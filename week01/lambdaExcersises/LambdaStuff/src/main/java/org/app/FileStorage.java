@@ -1,21 +1,21 @@
 package org.app;
 
 import java.io.*;
-
+//largely inspired by the example from here 'https://github.com/dat3Cph/material/blob/sem2024spring/flowJavaDD/javaDD/SerializeObjects.md'
 public class FileStorage<T> implements DataStorage<T> {
-    private T content;
+    //private T content;
 
     @Override
     public String store(T data) {
-        this.content = data;
-        String filename = content.toString();
+
+        String filename = data.toString();
         String fileSuffix = (java.time.LocalDateTime.now()).format(java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
         filename = filename + fileSuffix+".ser";
         try {
             File file = new File(filename);
             FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream out = new ObjectOutputStream(fos);
-            out.writeObject(content);
+            out.writeObject(data);
             out.close();
             fos.close();
             return filename;
