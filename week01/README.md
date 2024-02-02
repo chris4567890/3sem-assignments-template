@@ -2,9 +2,9 @@
 
 ## Overview
 
-- Your name
-- which assignment are included
-- which one are completed and which one are not
+- Christian Høj
+- 1-9
+- cph-ch633@cphbusiness.dk 
+- most task are almost completed apart from those that I have most likely forgotten about.
 
-## Friday presentation
-- add the friday presentation into the weekly folder
+
