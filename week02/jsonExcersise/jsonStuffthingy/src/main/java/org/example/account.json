@@ -1,0 +1,90 @@
+{
+  "accounts":[{
+    "firstname": "Patrik",
+    "lastname": "Niklassen",
+    "birthday": "1901-6-23",
+    "address": {
+      "street": "den røde plads ",
+      "city": "moskva",
+      "zipcode": 4949
+    },
+    "account": {
+      "id": "2",
+      "balance": "weak",
+      "isActive": false
+    }
+  },{
+    "firstname": "Patrik",
+    "lastname": "Niklassen",
+    "birthday": "1901-6-23",
+    "address": {
+      "street": "den røde plads ",
+      "city": "moskva",
+      "zipcode": 4949
+    },
+    "account": {
+      "id": "2",
+      "balance": "weak",
+      "isActive": false
+    }
+  },{
+    "firstname": "Patrik",
+    "lastname": "Niklassen",
+    "birthday": "1901-6-23",
+    "address": {
+      "street": "den røde plads ",
+      "city": "moskva",
+      "zipcode": 4949
+    },
+    "account": {
+      "id": "2",
+      "balance": "weak",
+      "isActive": false
+    }
+  },{
+    "firstname": "Patrik",
+    "lastname": "Niklassen",
+    "birthday": "1901-6-23",
+    "address": {
+      "street": "den røde plads ",
+      "city": "moskva",
+      "zipcode": 4949
+    },
+    "account": {
+      "id": "2",
+      "balance": "weak",
+      "isActive": false
+    }
+  },{
+    "firstname": "Patrik",
+    "lastname": "Niklassen",
+    "birthday": "1901-6-23",
+    "address": {
+      "street": "den røde plads ",
+      "city": "moskva",
+      "zipcode": 4949
+    },
+    "account": {
+      "id": "2",
+      "balance": "weak",
+      "isActive": false
+    }
+  },{
+    "firstname": "Patrik",
+    "lastname": "Niklassen",
+    "birthday": "1901-6-23",
+    "address": {
+      "street": "den røde plads ",
+      "city": "moskva",
+      "zipcode": 4949
+    },
+    "account": {
+      "id": "2",
+      "balance": "weak",
+      "isActive": false
+    }
+  }]
+
+
+
+}
