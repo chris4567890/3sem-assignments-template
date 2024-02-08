@@ -1,5 +1,5 @@
-{
-  "accounts":[{
+
+  [{
     "firstname": "Patrik",
     "lastname": "Niklassen",
     "birthday": "1901-6-23",
@@ -87,4 +87,3 @@
 
 
 
-}
