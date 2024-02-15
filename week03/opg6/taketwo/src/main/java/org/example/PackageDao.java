@@ -23,6 +23,7 @@ public class PackageDao {
         em.getTransaction().begin();
         if(find_by_tracking_number(tracking_number) != null){
             Query query = em.createQuery("update Package pac SET pac.delivery_status = :status where pac.tracking_number = :tracking_number");
+            //based on code from here https://docs.oracle.com/javaee/6/tutorial/doc/bnbrg.html
             query.setParameter("status",status);
             query.setParameter("tracking_number",tracking_number);
             query.executeUpdate();
