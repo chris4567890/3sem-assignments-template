@@ -9,18 +9,20 @@ import org.hibernate.service.ServiceRegistry;
 
 import java.util.Properties;
 
+
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class HibernateConfig {
 
     private static EntityManagerFactory entityManagerFactory;
+    private static String dbName;
 
     private static EntityManagerFactory buildEntityFactoryConfig() {
         try {
             Configuration configuration = new Configuration();
 
             Properties props = new Properties();
-
-            props.put("hibernate.connection.url", "jdbc:postgresql://localhost:5432/packages?currentSchema=public");
+            String connctionURL = String.format("jdbc:postgresql://localhost:5432/%s?currentSchema=public", dbName);
+            props.put("hibernate.connection.url", connctionURL);
             props.put("hibernate.connection.username", "postgres");
             props.put("hibernate.connection.password", "postgres");
             props.put("hibernate.show_sql", "true"); // show sql in console
@@ -55,14 +57,14 @@ public class HibernateConfig {
 
     private static void getAnnotationConfiguration(Configuration configuration) {
         // add annotated classes
-        configuration.addAnnotatedClass(Package.class);
-        // configuration.addAnnotatedClass(<YOUR ENTITY>.class);
-        configuration.addAnnotatedClass(Package.class);
-        configuration.addAnnotatedClass(Location.class);
-        configuration.addAnnotatedClass(Shipment.class);
+        //configuration.addAnnotatedClass(<>.class);
+        configuration.addAnnotatedClass(Student.class);
+        configuration.addAnnotatedClass(Semester.class);
+        configuration.addAnnotatedClass(Teacher.class);
     }
 
-    public static EntityManagerFactory getEntityManagerFactoryConfig() {
+    public static EntityManagerFactory getEntityManagerFactoryConfig(String name) {
+        dbName = name;
         if (entityManagerFactory == null) entityManagerFactory = buildEntityFactoryConfig();
         return entityManagerFactory;
     }

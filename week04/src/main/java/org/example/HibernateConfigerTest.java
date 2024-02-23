@@ -8,10 +8,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 import java.util.Properties;
-
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
-public class HibernateConfig {
-
+public class HibernateConfigerTest {
     private static EntityManagerFactory entityManagerFactory;
 
     private static EntityManagerFactory buildEntityFactoryConfig() {
@@ -20,7 +18,7 @@ public class HibernateConfig {
 
             Properties props = new Properties();
 
-            props.put("hibernate.connection.url", "jdbc:postgresql://localhost:5432/packages?currentSchema=public");
+            props.put("hibernate.connection.url", "jdbc:postgresql://localhost:5432/dolphin_test?currentSchema=public");
             props.put("hibernate.connection.username", "postgres");
             props.put("hibernate.connection.password", "postgres");
             props.put("hibernate.show_sql", "true"); // show sql in console
@@ -55,11 +53,12 @@ public class HibernateConfig {
 
     private static void getAnnotationConfiguration(Configuration configuration) {
         // add annotated classes
-        configuration.addAnnotatedClass(Package.class);
         // configuration.addAnnotatedClass(<YOUR ENTITY>.class);
-        configuration.addAnnotatedClass(Package.class);
-        configuration.addAnnotatedClass(Location.class);
-        configuration.addAnnotatedClass(Shipment.class);
+        configuration.addAnnotatedClass(Person.class);
+        configuration.addAnnotatedClass(PersonDetail.class);
+        configuration.addAnnotatedClass(Fee.class);
+        configuration.addAnnotatedClass(Note.class);
+
     }
 
     public static EntityManagerFactory getEntityManagerFactoryConfig() {

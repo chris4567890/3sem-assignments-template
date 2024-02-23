@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed0a4567-8f10-4325-a05a-c7bd759e72c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/config/HibernateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dao/DriverDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dao/IDriverDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dao/ITruckDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dao/TruckDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/model/Truck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dao/DriverDAOImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dao/TruckDAOImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/HibernateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/Populate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/Semester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/dao/IStudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/dao/StudentDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../opg3/schoolExcersise/src/main/java/org/example/dao/StudentInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/Fee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/FeeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/HibernateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/HibernateConfigerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/NoteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/PersonDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/main/java/org/example/PersonDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../src/test/java/org/example/PersonDaoTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="8gxhu2b9" />
+  </component>
+  <component name="ProjectId" id="2ceD6ozb0CoBnQ5zcaPItVbj7Zf" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.dao" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed0a4567-8f10-4325-a05a-c7bd759e72c1" name="Changes" comment="" />
+      <created>1708462980261</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708462980261</updated>
+      <workItem from="1708462981265" duration="3340000" />
+      <workItem from="1708506990307" duration="131000" />
+      <workItem from="1708507148425" duration="109000" />
+      <workItem from="1708507342074" duration="7133000" />
+      <workItem from="1708515227253" duration="6412000" />
+      <workItem from="1708521691186" duration="2899000" />
+      <workItem from="1708592028422" duration="1828000" />
+      <workItem from="1708593893057" duration="12616000" />
+      <workItem from="1708673787491" duration="1973000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/model/Driver.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/dao/DriverDAOImpl.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/dao/DriverDAOImpl.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/dao/TruckDAOImpl.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
