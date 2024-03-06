@@ -1,0 +1,27 @@
+GET http://localhost:7007/dogs
+###
+PUT http://localhost:7007/dogs/4
+
+{
+   "id":4,
+   "name":"Mr.PeanutButter",
+   "age":7
+}
+
+###
+
+POST http://localhost:7007/dogs
+
+{
+    "id":5,
+    "name":"Ellemand",
+    "age":50
+}
+
+###
+GET http://localhost:7007/dogs/3
+###
+
+###
+DELETE http://localhost:7007/dogs/5
+###
