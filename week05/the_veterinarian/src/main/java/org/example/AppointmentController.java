@@ -3,6 +3,7 @@ package org.example;
 import io.javalin.*;
 import io.javalin.http.Handler;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -19,7 +20,8 @@ public class AppointmentController {
 
     public static Handler getAllAppointments(){
         AppointmentDAO appointmentDAO = AppointmentDAO.instance();
-        Iterable<Appointment> appointments = appointmentDAO.getAppointments();
+        //Iterable<Appointment> appointments = appointmentDAO.getAppointments();
+        List<Appointment> appointments = appointmentDAO.getAppointments();
 
         return ctx ->{
 
@@ -37,9 +39,9 @@ public class AppointmentController {
         });*/
         return ctx ->{
             int id = Integer.parseInt(ctx.pathParam("id"));
-
-            Optional<Appointment> appointment = Optional.ofNullable(appointmentDAO.getAppointmentById(id));
-          if(appointment.isPresent()){
+            Appointment appointment = appointmentDAO.getAppointmentById(id);
+            //Optional<Appointment> appointment = Optional.ofNullable(appointmentDAO.getAppointmentById(id));
+          if(appointment!= null){
               ctx.json(appointment);
           }else {
               ctx.status(404);

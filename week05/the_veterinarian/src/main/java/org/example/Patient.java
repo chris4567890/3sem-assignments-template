@@ -2,17 +2,16 @@ package org.example;
 
 import lombok.*;
 
-import java.util.Date;
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
-public class Appointment {
-
+public class Patient {
     private int id;
-    private String date;
-
     private String name;
+    private String species;
+    private int age;
+
 
 }

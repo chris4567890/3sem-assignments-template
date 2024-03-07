@@ -12,7 +12,16 @@ import static io.javalin.apibuilder.ApiBuilder.path;
 //code from https://www.baeldung.com/javalin-rest-microservices
 public class AppointmentDAO {
 
-    private List<Appointment> appointments = new ArrayList<>();
+    private static List<Appointment> appointments = new ArrayList<>();
+
+    private static AppointmentDAO instance;
+
+    public static AppointmentDAO getInstance(){
+        if(instance == null){
+            instance = new AppointmentDAO();
+        }
+        return instance;
+    }
 
     public AppointmentDAO(){
 
@@ -31,7 +40,7 @@ public class AppointmentDAO {
         return appointmentDAO;
     }
 
-    Appointment getAppointmentById(Integer id) {
+     Appointment getAppointmentById(Integer id) {
         for(Appointment appointment: appointments){
             if (appointment.getId() == id){
                 return appointment;
@@ -42,7 +51,7 @@ public class AppointmentDAO {
         return null;
     }
 
-    Iterable<Appointment> getAppointments(){
+    public List<Appointment> getAppointments(){
         List<Appointment> appointmentByDate = appointments
                 .stream()
                 .sorted(Comparator.comparing(Appointment::getDate))
