@@ -1,0 +1,2 @@
+get http://localhost:7007/api/vet/appointments/1
+###

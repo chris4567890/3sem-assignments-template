@@ -2,6 +2,9 @@ package org.example;
 
 import io.javalin.Javalin;
 
+import javax.persistence.Entity;
+
+@Entity
 public class HotelDAO extends Dao {
     @Override
     public void getAll(Javalin app) {
