@@ -6,24 +6,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-
-
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Room {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
-    int number;
-    double price;
+    private int id;
+    private String role;
 
-    public Room(int number, double price){
-        this.number = number;
-        this.price = price;
+    public Role(String role){
+        this.role = role;
     }
 
 }

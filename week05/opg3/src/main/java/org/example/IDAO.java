@@ -1,14 +1,15 @@
 package org.example;
 
 import io.javalin.Javalin;
+import org.eclipse.jetty.io.EndPoint;
 
 public interface IDAO<T> {
 
-    public void getAll(Javalin app);
-    public void getById(Javalin app);
-    public void create(Javalin app);
-    public void update(Javalin app);
-    public void delete(Javalin app);
+    public void getAll();
+    public void getById();
+    public void create();
+    public void update();
+    public void delete();
 
 
 }

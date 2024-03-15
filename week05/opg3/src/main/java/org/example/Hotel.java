@@ -1,15 +1,14 @@
 package org.example;
 
-import lombok.*;
 
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.*;
+import lombok.*;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @ToString
 public class Hotel {
@@ -19,9 +18,16 @@ public class Hotel {
     String name;
     String address;
 
-    @OneToMany
-    List<Room> rooms = new ArrayList<>();;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    List<Room> rooms = new ArrayList<>();
 
+    public void add_room(Room room){
+        rooms.add(room);
+    }
 
+    public Hotel(String name,String address){
+        this.name = name;
+        this.address = address;
+    }
 
 }

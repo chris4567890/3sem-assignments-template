@@ -1,20 +1,16 @@
 package org.example;
 
-import javax.persistence.*;
+//import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class HotelDTO {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String name;
-    private String address;
-    @OneToMany
+    int id;
+    String name;
+    String dao;
+    public HotelDTO(){
 
-    private List<RoomDTO> rooms = new ArrayList<>();
-
-
+    }
 
 }
