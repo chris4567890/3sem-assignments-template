@@ -62,6 +62,7 @@ public class SecurityController {
 
 
     public void login(){
+
         ApiBuilder.post("/login",ctx->{
             try(EntityManager em = emf.createEntityManager()){
                 em.getTransaction().begin();

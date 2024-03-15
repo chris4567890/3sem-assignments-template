@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.javalin.Javalin;
 import io.javalin.apibuilder.EndpointGroup;
-
+//got this from one of my classmates
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -90,4 +90,3 @@ public class ApplicationConfig {
 
 
 }
-S
