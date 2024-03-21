@@ -6,32 +6,24 @@ import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jwt.JWTClaimsSet;
 import io.javalin.apibuilder.ApiBuilder;
-import io.javalin.apibuilder.EndpointGroup;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
-import io.javalin.validation.ValidationException;
 import jakarta.persistence.*;
-import jdk.jshell.execution.Util;
 import org.example.config.ApiException;
 import org.example.config.HibernateConfig;
 
-import static io.javalin.apibuilder.ApiBuilder.path;
 import static org.apache.http.client.methods.RequestBuilder.post;
 
 import jakarta.persistence.EntityManagerFactory;
 
 
-import org.example.config.HibernateConfig;
-import io.javalin.apibuilder.ApiBuilder.*;
-
 //import javax.persistence.Entity;
 
 import java.util.Date;
-import java.util.List;
 
-import com.google.gson.Gson;
-
-import static io.javalin.apibuilder.ApiBuilder.*;
+import org.example.daos.UserDAO;
+import org.example.dto.TokenDTO;
+import org.example.dto.UserDTO;
 //import static org.example.config.Routes.userController;
 
 

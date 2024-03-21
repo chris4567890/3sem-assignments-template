@@ -1,11 +1,10 @@
 package org.example.config;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.NoArgsConstructor;
-import org.example.Hotel;
+import org.example.entities.Hotel;
 import org.example.Role;
-import org.example.Room;
+import org.example.entities.Room;
 import org.example.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

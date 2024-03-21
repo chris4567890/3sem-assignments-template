@@ -1,4 +1,4 @@
-package org.example;
+package org.example.dto;
 
 //import javax.persistence.*;
 import java.util.ArrayList;

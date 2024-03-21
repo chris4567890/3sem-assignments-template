@@ -1,4 +1,4 @@
-package org.example;
+package org.example.daos;
 
 import io.javalin.Javalin;
 import org.eclipse.jetty.io.EndPoint;

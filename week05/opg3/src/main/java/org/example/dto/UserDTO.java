@@ -1,9 +1,11 @@
-package org.example;
+package org.example.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.example.Role;
+import org.example.User;
 
 import java.util.HashSet;
 import java.util.Set;

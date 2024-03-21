@@ -3,6 +3,7 @@ package org.example.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.apibuilder.EndpointGroup;
 import org.example.*;
+import org.example.daos.HotelDAO;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 

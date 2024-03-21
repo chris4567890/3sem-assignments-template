@@ -1,8 +1,11 @@
-package org.example;
+package org.example.daos;
 
 import io.javalin.validation.ValidationException;
+import org.example.Role;
+import org.example.User;
+import org.example.UserController;
 
-public class UserDAO implements ISecurityDAO{
+public class UserDAO implements ISecurityDAO {
     UserController userController = new UserController();
     @Override
     public User getVerifiedUser(String username, String password) throws ValidationException {

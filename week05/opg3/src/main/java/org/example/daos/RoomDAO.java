@@ -1,18 +1,15 @@
-package org.example;
+package org.example.daos;
 
-import io.javalin.Javalin;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Query;
-import org.eclipse.jetty.io.EndPoint;
+import org.example.entities.Room;
 import org.example.config.HibernateConfig;
-import org.hibernate.engine.query.spi.EntityGraphQueryHint;
 
 import java.util.List;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
-public class RoomDAO extends Dao{
+public class RoomDAO extends Dao {
     EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig("hotel_db");
     @Override
     public void getAll() {

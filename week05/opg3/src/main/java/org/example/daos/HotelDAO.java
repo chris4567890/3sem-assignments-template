@@ -1,12 +1,12 @@
-package org.example;
+package org.example.daos;
 
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
 
 
+import org.example.entities.Hotel;
 import org.example.config.HibernateConfig;
 
 
