@@ -17,6 +17,7 @@ public class UserDTO {
 
     public UserDTO(User user){
         this.user = user;
+        this.role = (Role) user.getRolesAsStrings();
     }
     public UserDTO(Role role){
         this.role = role;

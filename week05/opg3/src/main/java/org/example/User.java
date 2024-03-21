@@ -24,8 +24,18 @@ public class User {
     private String role;
 
     @ManyToMany
-    List<Role> roles = new ArrayList<>();
+    private Set<Role> roles = new HashSet<>();
     //<String> roles = new HashSet<>();
+    public Set<String> getRolesAsStrings() {
+        if (roles.isEmpty()) {
+            return null;
+        }
+        Set<String> rolesAsStrings = new HashSet<>();
+        roles.forEach((role) -> {
+            rolesAsStrings.add(role.getRole());
+        });
+        return rolesAsStrings;
+    }
 
     public User(String username,String password,String role){
         this.username = username;

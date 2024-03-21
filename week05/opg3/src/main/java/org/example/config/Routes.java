@@ -1,14 +1,13 @@
 package org.example.config;
 
-import io.javalin.Javalin;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.apibuilder.EndpointGroup;
-import org.example.HotelDAO;
-import org.example.SecurityController;
-import org.example.UserController;
+import org.example.*;
 
 import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class Routes {
+    ObjectMapper objectMapper = new ObjectMapper();
     static HotelDAO hotelDAO = new HotelDAO();
     static SecurityController securityController = new SecurityController();
     static UserController userController = new UserController();
@@ -17,8 +16,9 @@ public class Routes {
             path("/",getRoutes());
         };
     }
-    //i am never doing this shit crap again ever this task shouldn't be for individuals at all.
-    public static EndpointGroup createUser(){
+
+
+    public static EndpointGroup UserRoutes(){
         return()->{
           path("/",()->{
             securityController.login();
