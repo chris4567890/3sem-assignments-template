@@ -34,3 +34,6 @@ Content-Type: application/json
 }
 ###
 PUT http://localhost:7007/api/u/addrole/admin/2
+
+###
+GET http://localhost:7007/api/protected//admin_demo

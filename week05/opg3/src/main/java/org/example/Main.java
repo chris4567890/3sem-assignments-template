@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         //System.out.println("Hello world!");
         ApplicationConfig applicationConfig = ApplicationConfig.getInstance();
-        applicationConfig.initiateServer().setExceptionHandling().startServer(7007).setRoutes(Routes.setRoutes());
+        applicationConfig.initiateServer().setExceptionHandling().checkSecurityRoles().startServer(7007).setRoutes(Routes.getSecuredRoutes());
 
 
     }
