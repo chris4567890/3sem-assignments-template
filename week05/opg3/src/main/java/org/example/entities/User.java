@@ -19,8 +19,15 @@ public class User {
     private int id;
     private String username;
     private String password;
-    private String role;
-
+    @Setter(AccessLevel.NONE)
+    @JoinTable(name = "users_role",
+            joinColumns = {
+                    @JoinColumn(name = "user_id", referencedColumnName = "id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "roles_role", referencedColumnName = "role")
+            },uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "roles_role"})
+    )
     @ManyToMany
     private Set<Role> roles = new HashSet<>();
 
@@ -40,20 +47,15 @@ public class User {
         });
         return rolesAsStrings;
     }
-    public void addUser(Role role){
+
+    public void addRole(Role role) {
         roles.add(role);
     }
-    public User(String username,String password,String role){
-        this.username = username;
-        this.password = BCrypt.hashpw(password,BCrypt.gensalt());
-        this.role = role;
+
+
+    public boolean verifyPassword(String pass) {
+        return BCrypt.checkpw(pass, this.password);
     }
-
-    public boolean verifyPassword(String pass){
-        return BCrypt.checkpw(pass,this.password);
-    }
-
-
 
 
 }

@@ -15,3 +15,22 @@ Content-Type: application/json
   "username": "Ronald_Reagan",
   "password": "the greatest president defeating communists with facts and logic!"
 }
+###
+POST http://localhost:7007/api/u/loginuser
+Content-Type: application/json
+
+{
+ "username": "nicklas",
+ "password": "this is my super secret pass don't touch"
+}
+
+###
+POST http://localhost:7007/api/u/registeruser
+Content-Type: application/json
+
+{
+  "username": "root",
+  "password": "root"
+}
+###
+PUT http://localhost:7007/api/u/addrole/admin/2

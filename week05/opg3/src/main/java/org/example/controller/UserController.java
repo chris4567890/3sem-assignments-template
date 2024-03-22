@@ -24,7 +24,7 @@ public class UserController {
 
         post("/user/create",ctx -> {
             try(var em = emf.createEntityManager()){
-                User user = new User(username,password,"");
+                User user = new User(username,password);
                 em.getTransaction().begin();
                 em.persist(user);
                 em.getTransaction().commit();

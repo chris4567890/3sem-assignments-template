@@ -36,8 +36,9 @@ public class UserDAO implements ISecurityDAO {
             Query queryUser = em.createQuery("select u from users u where u.username =:username");
             queryUser.setParameter("username",username);
             User foundUser = (User) queryUser.getSingleResult();
+
             if(foundUser != null){
-                foundUser.setRole(role);
+                foundUser.addRole(em.find(Role.class,role));
                 em.persist(foundUser);
                 em.getTransaction().commit();
                 em.close();

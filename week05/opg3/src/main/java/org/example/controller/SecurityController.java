@@ -34,6 +34,7 @@ import org.example.daos.UserDAO;
 import org.example.dto.TokenDTO;
 import org.example.dto.UserDTO;
 import org.example.entities.Role;
+import org.example.entities.RoleEnum;
 import org.example.entities.User;
 //import static org.example.config.Routes.userController;
 
@@ -43,6 +44,20 @@ public class SecurityController {
     EntityManagerFactory emf = HibernateConfig.getEntityManagerFactory();
     Utils utils = new Utils();
     ObjectMapper objectMapper = new ObjectMapper();
+    //based off https://stackoverflow.com/questions/40367748/proper-usage-of-singleton-getinstance-method
+    private static SecurityController securityController;
+
+    public static SecurityController getInstance() {
+        if(securityController == null){
+            synchronized (SecurityController.class){
+                if(securityController == null){
+                    securityController = new SecurityController();
+                }
+            }
+        }
+        return securityController;
+    }
+
     public User createUser(String username, String password) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -52,12 +67,30 @@ public class SecurityController {
             userRole = new Role("user");
             em.persist(userRole);
         }
-        user.addUser(userRole);
+        user.addRole(userRole);
         em.persist(user);
         em.getTransaction().commit();
         em.close();
         return user;
     }
+    public Handler addRole(){
+        System.out.println("I do get into the addRole screw you!");
+        return (ctx) -> {
+
+          try(var em = HibernateConfig.getEntityManagerFactory().createEntityManager()) {
+
+              int userId = Integer.parseInt(ctx.pathParam("id"));
+              String chosenRole = ctx.pathParam("role").toUpperCase();
+              RoleEnum role = RoleEnum.valueOf(chosenRole);
+              Query query = em.createQuery("select u from users u where u.id =:id");
+              query.setParameter("id",userId);
+              User userInput = (User) query.getSingleResult();
+              userDAO.addUserRole(userInput.getUsername(), String.valueOf(role));
+              ctx.result("role added");
+          }
+        };
+    }
+
     public Handler register() {
         return (ctx) -> {
             ObjectNode returnObject = objectMapper.createObjectNode();
@@ -181,10 +214,10 @@ public class SecurityController {
         // https://codecurated.com/blog/introduction-to-jwt-jws-jwe-jwa-jwk/
         try {
             JWTClaimsSet claimsSet = new JWTClaimsSet.Builder()
-                    .subject(user.getUser().getUsername())
+                    .subject(user.getUsername())
                     .issuer(ISSUER)
-                    .claim("username", user.getUser().getRole())
-                    .claim("roles", user.getUser().getRolesAsStrings().stream().reduce((s1, s2) -> s1 + "," + s2).get())
+                    .claim("username", user.getUsername())
+                    .claim("roles", user.getRolesAsString().stream().reduce((s1, s2) -> s1 + "," + s2).get())
                     .expirationTime(new Date(new Date().getTime() + Integer.parseInt(TOKEN_EXPIRE_TIME)))
                     .build();
             Payload payload = new Payload(claimsSet.toJSONObject());
