@@ -2,10 +2,13 @@ package org.example.daos;
 
 import io.javalin.http.Context;
 import io.javalin.validation.ValidationException;
+import jakarta.persistence.Query;
 import org.example.config.HibernateConfig;
 import org.example.entities.Role;
 import org.example.entities.User;
 import org.example.controller.UserController;
+
+import java.util.Queue;
 
 public class UserDAO implements ISecurityDAO {
     UserController userController = new UserController();
@@ -19,6 +22,8 @@ public class UserDAO implements ISecurityDAO {
         return userController.createUser(username,password);
     }
 
+
+
     @Override
     public Role createRole(String role) {
         return null;
@@ -26,7 +31,22 @@ public class UserDAO implements ISecurityDAO {
 
     @Override
     public User addUserRole(String username, String role) {
-        return null;
+        try(var em = HibernateConfig.getEntityManagerFactory().createEntityManager()){
+            em.getTransaction().begin();
+            Query queryUser = em.createQuery("select u from users u where u.username =:username");
+            queryUser.setParameter("username",username);
+            User foundUser = (User) queryUser.getSingleResult();
+            if(foundUser != null){
+                foundUser.setRole(role);
+                em.persist(foundUser);
+                em.getTransaction().commit();
+                em.close();
+                return foundUser;
+            }else{
+                System.out.println("No user found please try again");
+                return null;
+            }
+        }
     }
 
     public User register(User saved) {

@@ -8,11 +8,9 @@ import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
 import io.javalin.apibuilder.ApiBuilder;
-import io.javalin.http.Context;
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 import jakarta.persistence.*;
-import okhttp3.internal.Util;
 import org.example.Utils;
 import org.example.config.ApiException;
 import org.example.config.HibernateConfig;
@@ -220,9 +218,9 @@ public class SecurityController {
         return createToken(user, ISSUER, TOKEN_EXPIRE_TIME, SECRET_KEY);
     }
 
-    public void login(){
-
-        ApiBuilder.post("/login",ctx->{
+    public Handler login(){
+        System.out.println("nothing wrong with the login");
+        return (ctx) -> {
             try(EntityManager em = emf.createEntityManager()){
                 em.getTransaction().begin();
                 User user = ctx.bodyAsClass(User.class);
@@ -231,8 +229,11 @@ public class SecurityController {
                 query.setParameter("password",user.getPassword());
                 User foundUser = (User) query.getSingleResult();
                 ctx.json(foundUser).status(200);
+            }catch (NoResultException e){
+                ctx.status(401).json("invalid username or password");
             }
-        });
+        };
+
     }
 
 

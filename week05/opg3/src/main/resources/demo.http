@@ -8,3 +8,10 @@ Content-Type: application/json
  "password": "the greatest president defeating communists with facts and logic!"
 }
 ###
+POST http://localhost:7007/api/u/loginuser
+Content-Type: application/json
+
+{
+  "username": "Ronald_Reagan",
+  "password": "the greatest president defeating communists with facts and logic!"
+}

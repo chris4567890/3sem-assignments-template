@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.javalin.Javalin;
 import io.javalin.apibuilder.EndpointGroup;
+import io.javalin.http.Handler;
+import org.example.entities.RoleEnum;
 //got this from one of my classmates
 import java.io.IOException;
 import java.io.InputStream;
