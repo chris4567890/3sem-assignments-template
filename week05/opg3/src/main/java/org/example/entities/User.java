@@ -1,12 +1,10 @@
-package org.example;
+package org.example.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 import org.mindrot.jbcrypt.BCrypt;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity(name = "users")
@@ -25,6 +23,12 @@ public class User {
 
     @ManyToMany
     private Set<Role> roles = new HashSet<>();
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     //<String> roles = new HashSet<>();
     public Set<String> getRolesAsStrings() {
         if (roles.isEmpty()) {
@@ -36,7 +40,9 @@ public class User {
         });
         return rolesAsStrings;
     }
-
+    public void addUser(Role role){
+        roles.add(role);
+    }
     public User(String username,String password,String role){
         this.username = username;
         this.password = BCrypt.hashpw(password,BCrypt.gensalt());

@@ -1,5 +1,6 @@
-package org.example;
+package org.example.entities;
 
+import io.javalin.security.RouteRole;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,16 +11,20 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 public class Role {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String role;
 
     public Role(String role){
         this.role = role;
     }
+
+    enum RoleEnum  {
+        ANYONE,
+        USER,
+        ADMIN
+    }
+
 
 }

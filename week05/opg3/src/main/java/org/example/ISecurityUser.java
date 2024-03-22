@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.entities.Role;
+
 import java.util.Set;
 
 public interface ISecurityUser {

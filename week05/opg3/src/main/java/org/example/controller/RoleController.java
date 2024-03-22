@@ -1,9 +1,8 @@
-package org.example;
+package org.example.controller;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Query;
+import org.example.entities.Role;
 import org.example.config.HibernateConfig;
 
 public class RoleController {

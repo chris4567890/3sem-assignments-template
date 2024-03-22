@@ -1,32 +1,10 @@
-POST http://localhost:7007/hotel
+
+###
+POST http://localhost:7007/api/u/registeruser
 Content-Type: application/json
 
 {
-  "name": "Bob the building",
-  "address": "we did it!",
-  "rooms": [
-    {
-      "number": 1939,
-      "price": 6000000
-    }
-  ]
+ "username": "Ronald_Reagan",
+ "password": "the greatest president defeating communists with facts and logic!"
 }
 ###
-PUT http://localhost:7007/hotel/4
-Content-Type: application/json
-
-{
-  "name": "Bob the buildings",
-  "address": "we did it!",
-  "rooms": [
-    {
-      "number": 1939,
-      "price": 6000000
-    }
-  ]
-}
-###
-DELETE http://localhost:7007/hotel/5
-###
-
-
