@@ -33,7 +33,10 @@ Content-Type: application/json
   "password": "root"
 }
 ###
-PUT http://localhost:7007/api/u/addrole/admin/2
+PUT http://localhost:7007/api/u/addrole/admin/1
+Content-Type: application/json
+
+
 
 ###
 GET http://localhost:7007/api/protected//admin_demo
